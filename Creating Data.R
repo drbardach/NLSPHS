@@ -6,3 +6,4 @@ NLSPHS2014_formated <- read.csv("/Volumes/CCPHSSR/xDATA/NLSPHS 2014/Analysis/NLS
 # -assign group membership
 # -merge data
 # -clean data
+# -sync with Lava
