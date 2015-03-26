@@ -41005,6 +41005,8 @@ run;
 
 data nlsphs2;
 set nlsphs1;
+length countyfull $800;
+length countypart $800;
 countyfull = CATX ( '; ' , county_full1 , county_full2 , county_full3 , county_full4 , county_full5 , county_full6 , county_full7 , county_full8 , county_full9 , county_full10 , county_full11 , county_full12 , county_full13 , county_full14 , county_full15 , county_full16 , county_full17 , county_full18 , county_full19 , county_full20 , county_full21 , county_full22 , county_full23 , county_full24 , county_full25 , county_full26 , county_full27 , county_full28 , county_full29 , county_full30 , county_full31 , county_full32 , county_full33 , county_full34 , county_full35 , county_full36 , county_full37 , county_full38 , county_full39 , county_full40 , county_full41 , county_full42 , county_full43 , county_full44 , county_full45 , county_full46 , county_full47 , county_full48 , county_full49 , county_full50 , county_full51 , county_full52 , county_full53 , county_full54 , county_full55 , county_full56 , county_full57 , county_full58 , county_full59 , county_full60 , county_full61 , county_full62 , county_full63 , county_full64 , county_full65 , county_full66 , county_full67 , county_full68 , county_full69 , county_full70 , county_full71 , county_full72 , county_full73 , county_full74 , county_full75 , county_full76 , county_full77 , county_full78 , county_full79 , county_full80 , county_full81 , county_full82 , county_full83 , county_full84 , county_full85 , county_full86 , county_full87 , county_full88 , county_full89 , county_full90 , county_full91 , county_full92 , county_full93 , county_full94 , county_full95 , county_full96 , county_full97 , county_full98 , county_full99 , county_full100 , 
 						   county_full101 , county_full102 , county_full103 , county_full104 , county_full105 , county_full106 , county_full107 , county_full108 , county_full109 , county_full110 , county_full111 , county_full112 , county_full113 , county_full114 , county_full115 , county_full116 , county_full117 , county_full118 , county_full119 , county_full120 , county_full121 , county_full122 , county_full123 , county_full124 , county_full125 , county_full126 , county_full127 , county_full128 , county_full129 , county_full130 , county_full131 , county_full132 , county_full133 , county_full134 , county_full135 , county_full136 , county_full137 , county_full138 , county_full139 , county_full140 , county_full141 , county_full142 , county_full143 , county_full144 , county_full145 , county_full146 , county_full147 , county_full148 , county_full149 , county_full150 , county_full151 , county_full152 , county_full153 , county_full154 , county_full155 , county_full156 , county_full157 , county_full158 , county_full159 , county_full160 , county_full161 , county_full162 , county_full163 , county_full164 , county_full165 , county_full166 , county_full167 , county_full168 , county_full169 , county_full170 , county_full171 , county_full172 , county_full173 , county_full174 , county_full175 , county_full176 , county_full177 , county_full178 , county_full179 , county_full180 , county_full181 , county_full182 , county_full183 , county_full184 , county_full185 , county_full186 , county_full187 , county_full188 , county_full189 , county_full190 , county_full191 , county_full192 , county_full193 , county_full194 , county_full195 , county_full196 , county_full197 , county_full198 , county_full199 , county_full200 , 
 						   county_full201 , county_full202 , county_full203 , county_full204 , county_full205 , county_full206 , county_full207 , county_full208 , county_full209 , county_full210 , county_full211 , county_full212 , county_full213 , county_full214 , county_full215 , county_full216 , county_full217 , county_full218 , county_full219 , county_full220 , county_full221 , county_full222 , county_full223 , county_full224 , county_full225 , county_full226 , county_full227 , county_full228 , county_full229 , county_full230 , county_full231 , county_full232 , county_full233 , county_full234 , county_full235 , county_full236 , county_full237 , county_full238 , county_full239 , county_full240 , county_full241 , county_full242 , county_full243 , county_full244 , county_full245 , county_full246 , county_full247 , county_full248 , county_full249 , county_full250 , county_full251 , county_full252 , county_full253 , county_full254 ); 
@@ -41013,6 +41015,7 @@ countypart = CATX ( '; ' , county_part1 , county_part2 , county_part3 , county_p
 						   county_part201 , county_part202 , county_part203 , county_part204 , county_part205 , county_part206 , county_part207 , county_part208 , county_part209 , county_part210 , county_part211 , county_part212 , county_part213 , county_part214 , county_part215 , county_part216 , county_part217 , county_part218 , county_part219 , county_part220 , county_part221 , county_part222 , county_part223 , county_part224 , county_part225 , county_part226 , county_part227 , county_part228 , county_part229 , county_part230 , county_part231 , county_part232 , county_part233 , county_part234 , county_part235 , county_part236 , county_part237 , county_part238 , county_part239 , county_part240 , county_part241 , county_part242 , county_part243 , county_part244 , county_part245 , county_part246 , county_part247 , county_part248 , county_part249 , county_part250 , county_part251 , county_part252 , county_part253 , county_part254 ); 
 
 run;
+
 
 data nlsphs3(rename=(redcap_survey_identifier=unid));
 set nlsphs2;
@@ -41043,63 +41046,83 @@ overasslphs	overassph	complete);
 set nlsphs3;
 run;
 
-data NLSPHS5;
+data NLSPHS5 (drop=state1);
 set NLSPHS4;
-IF state1 = '1' then state1 = 'ALABAMA'; 	
-ELSE 	IF state1 = '2' then state1 = 'ALASKA'; 	
-ELSE 	IF state1 = '3' then state1 = 'ARIZONA'; 	
-ELSE 	IF state1 = '4' then state1 = 'ARKANSAS'; 	
-ELSE 	IF state1 = '5' then state1 = 'CALIFORNIA'; 	
-ELSE 	IF state1 = '6' then state1 = 'COLORADO'; 	
-ELSE 	IF state1 = '7' then state1 = 'CONNECTICUT'; 	
-ELSE 	IF state1 = '8' then state1 = 'DELAWARE'; 	
-ELSE 	IF state1 = '9' then state1 = 'DISTRICT OF COLUMBIA'; 	
-ELSE 	IF state1 = '10' then state1 = 'FLORIDA'; 	
-ELSE 	IF state1 = '11' then state1 = 'GEORGIA'; 	
-ELSE 	IF state1 = '12' then state1 = 'HAWAII'; 	
-ELSE 	IF state1 = '13' then state1 = 'IDAHO'; 	
-ELSE 	IF state1 = '14' then state1 = 'ILLINOIS'; 	
-ELSE 	IF state1 = '15' then state1 = 'INDIANA'; 	
-ELSE 	IF state1 = '16' then state1 = 'IOWA'; 	
-ELSE 	IF state1 = '17' then state1 = 'KANSAS'; 	
-ELSE 	IF state1 = '18' then state1 = 'KENTUCKY'; 	
-ELSE 	IF state1 = '19' then state1 = 'LOUISIANA'; 	
-ELSE 	IF state1 = '20' then state1 = 'MAINE'; 	
-ELSE 	IF state1 = '21' then state1 = 'MARYLAND'; 	
-ELSE 	IF state1 = '22' then state1 = 'MASSACHUSETTS'; 	
-ELSE 	IF state1 = '23' then state1 = 'MICHIGAN'; 	
-ELSE 	IF state1 = '24' then state1 = 'MINNESOTA'; 	
-ELSE 	IF state1 = '25' then state1 = 'MISSISSIPPI'; 	
-ELSE 	IF state1 = '26' then state1 = 'MISSOURI'; 	
-ELSE 	IF state1 = '27' then state1 = 'MONTANA'; 	
-ELSE 	IF state1 = '28' then state1 = 'NEBRASKA'; 	
-ELSE 	IF state1 = '29' then state1 = 'NEVADA'; 	
-ELSE 	IF state1 = '30' then state1 = 'NEW HAMPSHIRE'; 	
-ELSE 	IF state1 = '31' then state1 = 'NEW JERSEY'; 	
-ELSE 	IF state1 = '32' then state1 = 'NEW MEXICO'; 	
-ELSE 	IF state1 = '33' then state1 = 'NEW YORK'; 	
-ELSE 	IF state1 = '34' then state1 = 'NORTH CAROLINA'; 	
-ELSE 	IF state1 = '35' then state1 = 'NORTH DAKOTA'; 	
-ELSE 	IF state1 = '36' then state1 = 'OHIO'; 	
-ELSE 	IF state1 = '37' then state1 = 'OKLAHOMA'; 	
-ELSE 	IF state1 = '38' then state1 = 'OREGON'; 	
-ELSE 	IF state1 = '39' then state1 = 'PENNSYLVANIA'; 	
-ELSE 	IF state1 = '40' then state1 = 'RHODE ISLAND'; 	
-ELSE 	IF state1 = '41' then state1 = 'SOUTH CAROLINA'; 	
-ELSE 	IF state1 = '42' then state1 = 'SOUTH DAKOTA'; 	
-ELSE 	IF state1 = '43' then state1 = 'TENNESSEE'; 	
-ELSE 	IF state1 = '44' then state1 = 'TEXAS'; 	
-ELSE 	IF state1 = '45' then state1 = 'UTAH'; 	
-ELSE 	IF state1 = '46' then state1 = 'VERMONT'; 	
-ELSE 	IF state1 = '47' then state1 = 'VIRGINIA'; 	
-ELSE 	IF state1 = '48' then state1 = 'WASHINGTON'; 	
-ELSE 	IF state1 = '49' then state1 = 'WEST VIRGINIA'; 	
-ELSE 	IF state1 = '50' then state1 = 'WISCONSIN'; 	
-ELSE 	IF state1 = '51' then state1 = 'WYOMING'; 
+length state2 $90;
+IF state1 = '1' then state2 = 'ALABAMA'; 	
+ELSE 	IF state1 = '2' then state2 = 'ALASKA'; 	
+ELSE 	IF state1 = '3' then state2 = 'ARIZONA'; 	
+ELSE 	IF state1 = '4' then state2 = 'ARKANSAS'; 	
+ELSE 	IF state1 = '5' then state2 = 'CALIFORNIA'; 	
+ELSE 	IF state1 = '6' then state2 = 'COLORADO'; 	
+ELSE 	IF state1 = '7' then state2 = 'CONNECTICUT'; 	
+ELSE 	IF state1 = '8' then state2 = 'DELAWARE'; 	
+ELSE 	IF state1 = '9' then state2 = 'DISTRICT OF COLUMBIA'; 	
+ELSE 	IF state1 = '10' then state2 = 'FLORIDA'; 	
+ELSE 	IF state1 = '11' then state2 = 'GEORGIA'; 	
+ELSE 	IF state1 = '12' then state2 = 'HAWAII'; 	
+ELSE 	IF state1 = '13' then state2 = 'IDAHO'; 	
+ELSE 	IF state1 = '14' then state2 = 'ILLINOIS'; 	
+ELSE 	IF state1 = '15' then state2 = 'INDIANA'; 	
+ELSE 	IF state1 = '16' then state2 = 'IOWA'; 	
+ELSE 	IF state1 = '17' then state2 = 'KANSAS'; 	
+ELSE 	IF state1 = '18' then state2 = 'KENTUCKY'; 	
+ELSE 	IF state1 = '19' then state2 = 'LOUISIANA'; 	
+ELSE 	IF state1 = '20' then state2 = 'MAINE'; 	
+ELSE 	IF state1 = '21' then state2 = 'MARYLAND'; 	
+ELSE 	IF state1 = '22' then state2 = 'MASSACHUSETTS'; 	
+ELSE 	IF state1 = '23' then state2 = 'MICHIGAN'; 	
+ELSE 	IF state1 = '24' then state2 = 'MINNESOTA'; 	
+ELSE 	IF state1 = '25' then state2 = 'MISSISSIPPI'; 	
+ELSE 	IF state1 = '26' then state2 = 'MISSOURI'; 	
+ELSE 	IF state1 = '27' then state2 = 'MONTANA'; 	
+ELSE 	IF state1 = '28' then state2 = 'NEBRASKA'; 	
+ELSE 	IF state1 = '29' then state2 = 'NEVADA'; 	
+ELSE 	IF state1 = '30' then state2 = 'NEW HAMPSHIRE'; 	
+ELSE 	IF state1 = '31' then state2 = 'NEW JERSEY'; 	
+ELSE 	IF state1 = '32' then state2 = 'NEW MEXICO'; 	
+ELSE 	IF state1 = '33' then state2 = 'NEW YORK'; 	
+ELSE 	IF state1 = '34' then state2 = 'NORTH CAROLINA'; 	
+ELSE 	IF state1 = '35' then state2 = 'NORTH DAKOTA'; 	
+ELSE 	IF state1 = '36' then state2 = 'OHIO'; 	
+ELSE 	IF state1 = '37' then state2 = 'OKLAHOMA'; 	
+ELSE 	IF state1 = '38' then state2 = 'OREGON'; 	
+ELSE 	IF state1 = '39' then state2 = 'PENNSYLVANIA'; 	
+ELSE 	IF state1 = '40' then state2 = 'RHODE ISLAND'; 	
+ELSE 	IF state1 = '41' then state2 = 'SOUTH CAROLINA'; 	
+ELSE 	IF state1 = '42' then state2 = 'SOUTH DAKOTA'; 	
+ELSE 	IF state1 = '43' then state2 = 'TENNESSEE'; 	
+ELSE 	IF state1 = '44' then state2 = 'TEXAS'; 	
+ELSE 	IF state1 = '45' then state2 = 'UTAH'; 	
+ELSE 	IF state1 = '46' then state2 = 'VERMONT'; 	
+ELSE 	IF state1 = '47' then state2 = 'VIRGINIA'; 	
+ELSE 	IF state1 = '48' then state2 = 'WASHINGTON'; 	
+ELSE 	IF state1 = '49' then state2 = 'WEST VIRGINIA'; 	
+ELSE 	IF state1 = '50' then state2 = 'WISCONSIN'; 	
+ELSE 	IF state1 = '51' then state2 = 'WYOMING'; 
 run;
 
+data NLSPHS5_;
+retain unid hardcopy state2;
+set NLSPHS5;
+run;
+
+data NLSPHS5;
+set NLSPHS5_;
+run;
+
+
+/*
+
+CONSIDER WORKING ON UNIDS for hard copy responses....
+
+We need to recode unid by deleting the last digit 9 from those whose entries were entered using the hard copy responses. 
+Then we need to delete those observation who requested paper copy and then match merge with the  
+
+*/
+
 PROC IMPORT OUT= WORK.Master 
-            DATAFILE= "X:\xDATA\NLSPHS 2014\Contacts\nlsphswithsurveylinks_Master.xls" 
+            DATAFILE= "X:\xDATA\NLSPHS 2014\Contacts\Mail merger\nlsphswithsurveylinks_Master_Final1.xls" 
             DBMS=EXCEL REPLACE;
      RANGE="Master_Updated"; 
      GETNAMES=YES;
@@ -41127,6 +41150,15 @@ run;
 data NLSPHS7;
 set NLSPHS6;
 where complete ne .;
+run;
+
+data NLSPHS7;
+set NLSPHS7;
+where state2 ne "";
+run;
+
+proc freq data=NLSPHS7;
+tables arm;
 run;
 
 PROC EXPORT DATA= WORK.NLSPHS7 
@@ -41519,7 +41551,7 @@ overallhe = overassph;
 run;
 
 data NLSPHS9 (keep=nacchoid unid lhdname2014 city2014 state2014 zip2014 execname2014 title2014 email2014 Arm Responded Instrument 
-state1 hd_name name_first name_mi name_last title phone phone_ext fax address1 address2 address_other city state zipcode email
+state2 hd_name name_first name_mi name_last title phone phone_ext fax address1 address2 address_other city state zipcode email
 countyfull countypart
 av1 ef1 lhd1 sha1 fbo1 phy1 sch1 sao1 loc1 fed1 hsp1 ins1 emp1 chc1 nono1 uni1 oth1 none1 othspecify1
 av2 ef2 lhd2 sha2 fbo2 phy2 sch2 sao2 loc2 fed2 hsp2 ins2 emp2 chc2 nono2 uni2 oth2 none2 othspecify2
@@ -41544,7 +41576,7 @@ av20 sha20 fbo20 phy20 sch20 sao20 loc20 fed20 hsp20 ins20 emp20 chc20 nono20 un
 overallph overallhe);
 retain 
 nacchoid unid lhdname2014 city2014 state2014 zip2014 execname2014 title2014 email2014 Arm Responded Instrument 
-state1 hd_name name_first name_mi name_last title phone phone_ext fax address1 address2 address_other city state zipcode email
+state2 hd_name name_first name_mi name_last title phone phone_ext fax address1 address2 address_other city state zipcode email
 countyfull countypart
 av1 ef1 lhd1 sha1 fbo1 phy1 sch1 sao1 loc1 fed1 hsp1 ins1 emp1 chc1 nono1 uni1 oth1 none1 othspecify1
 av2 ef2 lhd2 sha2 fbo2 phy2 sch2 sao2 loc2 fed2 hsp2 ins2 emp2 chc2 nono2 uni2 oth2 none2 othspecify2
@@ -41575,3 +41607,11 @@ PROC EXPORT DATA= WORK.NLSPHS9
             OUTFILE= "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS2014_formated.csv" 
             DBMS=CSV REPLACE;
 RUN;
+
+/*Deletes all other temporary datasets and only keeps the final NLSPHS dataset in work folder*/
+
+proc datasets library=work nolist;
+save NLSPHS9;
+quit;
+
+run;
