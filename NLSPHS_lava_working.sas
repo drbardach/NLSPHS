@@ -41161,8 +41161,29 @@ proc freq data=NLSPHS7;
 tables arm;
 run;
 
+libname ref1 "U:\NLSPHS2014";
+data sampled511a (keep=Region popcat nacchoid SelectionProb SamplingWeight);
+set ref1.sampled511a;
+run;
+
+proc sort data=sampled511a;
+by nacchoid;
+proc sort data=nlsphs7;
+by nacchoid;
+run;
+
+data NLSPHS7_;
+merge NLSPHS7 sampled511a;
+by nacchoid;
+run;
+
+data NLSPHS7;
+set NLSPHS7_;
+if unid=. then delete;
+run;
+
 PROC EXPORT DATA= WORK.NLSPHS7 
-            OUTFILE= "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS2014_raw.csv" 
+            OUTFILE= "X:\xDATA\NLSPHS 2014\Analysis\data\NLSPHS2014_raw.csv" 
             DBMS=CSV REPLACE;
 RUN;
 
@@ -41550,7 +41571,7 @@ overallph = overasslphs;
 overallhe = overassph;
 run;
 
-data NLSPHS9 (keep=nacchoid unid lhdname2014 city2014 state2014 zip2014 execname2014 title2014 email2014 Arm Responded Instrument 
+data NLSPHS9 (keep=nacchoid unid lhdname2014 city2014 state2014 zip2014 execname2014 title2014 email2014 Arm Instrument 
 state2 hd_name name_first name_mi name_last title phone phone_ext fax address1 address2 address_other city state zipcode email
 countyfull countypart
 av1 ef1 lhd1 sha1 fbo1 phy1 sch1 sao1 loc1 fed1 hsp1 ins1 emp1 chc1 nono1 uni1 oth1 none1 othspecify1
@@ -41573,9 +41594,9 @@ av17 ef17 lhd17 sha17 fbo17 phy17 sch17 sao17 loc17 fed17 hsp17 ins17 emp17 chc1
 av18 ef18 lhd18 sha18 fbo18 phy18 sch18 sao18 loc18 fed18 hsp18 ins18 emp18 chc18 nono18 uni18 oth18 none18 othspecify18
 av19 ef19 lhd19 sha19 fbo19 phy19 sch19 sao19 loc19 fed19 hsp19 ins19 emp19 chc19 nono19 uni19 oth19 none19 othspecify19
 av20 sha20 fbo20 phy20 sch20 sao20 loc20 fed20 hsp20 ins20 emp20 chc20 nono20 uni20 oth20 none20 othspecify20
-overallph overallhe);
+overallph overallhe Region popcat SelectionProb SamplingWeight);
 retain 
-nacchoid unid lhdname2014 city2014 state2014 zip2014 execname2014 title2014 email2014 Arm Responded Instrument 
+nacchoid unid lhdname2014 city2014 state2014 zip2014 execname2014 title2014 email2014 Arm Instrument 
 state2 hd_name name_first name_mi name_last title phone phone_ext fax address1 address2 address_other city state zipcode email
 countyfull countypart
 av1 ef1 lhd1 sha1 fbo1 phy1 sch1 sao1 loc1 fed1 hsp1 ins1 emp1 chc1 nono1 uni1 oth1 none1 othspecify1
@@ -41598,13 +41619,12 @@ av17 ef17 lhd17 sha17 fbo17 phy17 sch17 sao17 loc17 fed17 hsp17 ins17 emp17 chc1
 av18 ef18 lhd18 sha18 fbo18 phy18 sch18 sao18 loc18 fed18 hsp18 ins18 emp18 chc18 nono18 uni18 oth18 none18 othspecify18
 av19 ef19 lhd19 sha19 fbo19 phy19 sch19 sao19 loc19 fed19 hsp19 ins19 emp19 chc19 nono19 uni19 oth19 none19 othspecify19
 av20 sha20 fbo20 phy20 sch20 sao20 loc20 fed20 hsp20 ins20 emp20 chc20 nono20 uni20 oth20 none20 othspecify20
-overallph overallhe;
+overallph overallhe Region popcat SelectionProb SamplingWeight;
 set NLSPHS8;
 run;
 
-
 PROC EXPORT DATA= WORK.NLSPHS9 
-            OUTFILE= "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS2014_formated.csv" 
+            OUTFILE= "X:\xDATA\NLSPHS 2014\Analysis\data\NLSPHS2014_formated.csv" 
             DBMS=CSV REPLACE;
 RUN;
 
@@ -41613,5 +41633,5 @@ RUN;
 proc datasets library=work nolist;
 save NLSPHS9;
 quit;
-
 run;
+
