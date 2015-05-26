@@ -203,7 +203,7 @@ run;
 					
 -> strata = 1	SelecProb	25    		.6410257	0				.6410257	.6410257
 
--> strata = 2 	SelecProb	84        	.875		0				.875		.875
+-> strata = 2 	SelecProb	84        	.8659794	0				.8659794	.8659794
 
 -> strata = 3 	SelecProb	23         	.92			0				.92			.92
 
@@ -221,7 +221,7 @@ run;
 
 -> strata = 10 	SelecProb	4        	.4			0				.4			.4
 						
--> strata = 11 	SelecProb	56        	.875		0				.875		.875
+-> strata = 11 	SelecProb	57        	.890625		0				.890625		.890625
 
 -> strata = 12 	SelecProb	29    		.8787879	0				.8787879	.8787879
 
@@ -233,7 +233,7 @@ data smalljuris5;
 set smalljuris4;
 if SelectionProb=. then do;
 if Region=2 and popcat=1 /*strata=1*/ then SelectionProb=.6410257;
-else if Region=2 and popcat=2 /*strata=2*/ then SelectionProb=.875 ;
+else if Region=2 and popcat=2 /*strata=2*/ then SelectionProb=.8659794 ;
 else if Region=2 and popcat=3 /*strata=3*/ then SelectionProb=.92 ;
 else if Region=1 and popcat=1 /*strata=4*/ then SelectionProb=.6428571 ;
 else if Region=1 and popcat=2 /*strata=5*/ then SelectionProb=.7234042 ;
@@ -242,7 +242,7 @@ else if Region=3 and popcat=1 /*strata=7*/ then SelectionProb=.5531915 ;
 else if Region=3 and popcat=2 /*strata=8*/ then SelectionProb=.8280255 ;
 else if Region=3 and popcat=3 /*strata=9*/ then SelectionProb=.8644068 ;
 else if Region=4 and popcat=1 /*strata=10*/ then SelectionProb=.4 ;
-else if Region=4 and popcat=2 /*strata=11*/ then SelectionProb=.875 ;
+else if Region=4 and popcat=2 /*strata=11*/ then SelectionProb=.890625 ;
 else if Region=4 and popcat=3 /*strata=12*/ then SelectionProb=.8787879 ;
 end;
 if SamplingWeight=. then do;

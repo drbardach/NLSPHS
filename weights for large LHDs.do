@@ -71,6 +71,7 @@ For notes and suggested citation refer to the X:\xDATA\NLSPHS 2014\Analysis\data
  
 use "X:\xDATA\NLSPHS 2014\Analysis\data\SAMPFRAME_MISPOP.dta", clear
 keep if nacchoid != "" //Keeping only those LHDs that had missing population. 
+
 keep PopEst2013 nacchoid
 
 sort nacchoid
@@ -78,7 +79,13 @@ save mispop_sframe, replace
 
 merge nacchoid using sframe_large
 replace c0population=PopEst2013 if c0population==.
+count
 
+/*
+br if nlsphs==. & naccho13==. //Looking for those not in NACCHO13 and NLSPHS sampling frame
+drop if nlsphs==. & naccho13==.
+count
+*/
 *Step5: Generating a population category based on the percentiles calculated above from small size jurisdiction
 
 gen popcat=2
@@ -156,24 +163,35 @@ tab nlsphs strata, m
 
 
 
+
 . tab nlsphs strata, m
 
            |                              strata
     nlsphs |         1          2          3          4          5          6 |     Total
 -----------+------------------------------------------------------------------+----------
-         1 |        25         84         23         18         34         15 |       495 
-         . |        14         13          2         10         13          9 |       135 
+         1 |        25         84         23         18         34         15 |       497 
+         . |        14         13          2         10         13          9 |       134 
 -----------+------------------------------------------------------------------+----------
-     Total |        39         97         25         28         47         24 |       630 
+     Total |        39         97         25         28         47         24 |       631 
 
 
            |                              strata
     nlsphs |         7          8          9         10         11         12 |     Total
 -----------+------------------------------------------------------------------+----------
-         1 |        26        130         51          4         56         29 |       495 
-         . |        21         27          8          6          8          4 |       135 
+         1 |        26        130         51          4         57         29 |       497 
+         . |        21         27          8          6          7          4 |       134 
 -----------+------------------------------------------------------------------+----------
-     Total |        47        157         59         10         64         33 |       630 
+     Total |        47        157         59         10         64         33 |       631 
+
+
+           |   strata
+    nlsphs |         . |     Total
+-----------+-----------+----------
+         1 |         1 |       497 
+         . |         0 |       134 
+-----------+-----------+----------
+     Total |         1 |       631 
+
 
 
 . 
@@ -188,7 +206,7 @@ Note: This table indicates that in a sampling frame of 630 large size LHDs 495 w
 /*computing SelecProb=Probability of selection of an individual from the sampling frame*/
 
 gen SelecProb=25/39 if strata==1 & nlsphs==1
-replace SelecProb=84/96 if strata==2 & nlsphs==1
+replace SelecProb=84/97 if strata==2 & nlsphs==1
 replace SelecProb=23/25 if strata==3 & nlsphs==1
 replace SelecProb=18/28 if strata==4 & nlsphs==1
 replace SelecProb=34/47 if strata==5 & nlsphs==1
@@ -197,7 +215,7 @@ replace SelecProb=26/47 if strata==7 & nlsphs==1
 replace SelecProb=130/157 if strata==8 & nlsphs==1
 replace SelecProb=51/59 if strata==9 & nlsphs==1
 replace SelecProb=4/10 if strata==10 & nlsphs==1
-replace SelecProb=56/64 if strata==11 & nlsphs==1
+replace SelecProb=57/64 if strata==11 & nlsphs==1
 replace SelecProb=29/33 if strata==12 & nlsphs==1
 
 /*computing pweights=sampling weights which is equal to the reciprocal of the probability for an individual to be sampled*/
@@ -227,7 +245,7 @@ by strata, sort: summarize SelecProb
 
     Variable |       Obs        Mean    Std. Dev.       Min        Max
 -------------+--------------------------------------------------------
-   SelecProb |        84        .875           0       .875       .875
+   SelecProb |        84     .8659794           0   .8659794       .8659794
 
 ---------------------------------------------------------------------------------------------
 -> strata = 3
@@ -290,7 +308,7 @@ by strata, sort: summarize SelecProb
 
     Variable |       Obs        Mean    Std. Dev.       Min        Max
 -------------+--------------------------------------------------------
-   SelecProb |        56        .875           0       .875       .875
+   SelecProb |        57     .890625            0   .890625     .890625 
 
 ---------------------------------------------------------------------------------------------
 -> strata = 12
@@ -336,17 +354,17 @@ replace pw=wts if sp!=.
 
 /*Cosntructing a second set of weights*/
 
-gen SelectProb2=(495-27)/(630-27) if sp==.
+gen SelectProb2=(497-27)/(631-27) if sp==.
 replace SelectProb2=sp if SelectProb2==.
 replace SelectProb2=. if frame_arm1==1 & insamp_arm1==0 // Weights are not assigned for LHDs not sampled 
 gen pw2=1/SelectProb2 
 
-gen small=Popcat_TBD>0 if !missing(Popcat_TBD)
-replace small=0 if small==.
+gen small_frmarm1=Popcat_TBD>0 if !missing(Popcat_TBD)
+replace small_frmarm1=0 if small_frmarm1==.
 
 drop if nacchoid==""
 
-keep nacchoid unid Arm frame_arm1 insamp_arm1 nlsphs SelecProb pw SelectProb2 pw2 small region c0population popcat 
+keep nacchoid unid Arm frame_arm1 insamp_arm1 nlsphs SelecProb pw SelectProb2 pw2 small_frmarm1 region c0population popcat 
 count
 
 sort nacchoid
@@ -359,11 +377,11 @@ gen NLSPHS_responded=1
 drop Region popcat SelectionProb SamplingWeight
 sort nacchoid
 merge nacchoid using large
-duplicates list unid
+duplicates list nacchoid unid
 drop if unid==23309 & name_first=="Carlos" // We obtained paper response from the unid=23309 for TX007 and will use the response from it
 
 replace pop13=c0population if pop13==.
-replace NLSPHS_responded=0 if NLSPHS_responded==.
+replace NLSPHS_responded=0 if NLSPHS_responded==. & nlsphs !=.
 tab NLSPHS_responded
 
 gen region1=.
@@ -373,6 +391,10 @@ replace region1=3 if region=="South"
 replace region1=4 if region=="West"
 
 rename (region region1) (region_txt region)
+
+drop if insamp_arm1==0
+
+tab NLSPHS_responded
 
 save "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS_large_wts_adj_frm_small.dta", replace
 

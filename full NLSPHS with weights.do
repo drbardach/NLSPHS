@@ -53,10 +53,34 @@ tab Arm
 append using "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS_large_wts_adj_frm_small.dta"
 drop if nacchoid==""
 drop c0population _merge nlsphs_responded
+replace SelecProb=SelecProb_TBD if SelecProb==.
+replace pw=pw_TBD if pw==.
+egen insamp=rowtotal(insamp_arm1 insamp_arm23)
+
+replace region_txt="Northeast" if region==1
+replace region_txt="Midwest" if region==2
+replace region_txt="South" if region==3
+replace region_txt="West" if region==4
+
+drop region2014 nlsphs frame_arm1 insamp_arm1 insamp_arm23
 
 tab NLSPHS_responded if Arm==1
 tab NLSPHS_responded if Arm>1
 tab NLSPHS_responded if Arm==2
 tab NLSPHS_responded if Arm==3
+
+replace state2014=substr(nacchoid,1,2)
+
+levelsof state2014, local(N)
+display `: word count `N''
+
+save "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS_full_wts_adj.dta", replace
+
+/*Normalizing the weights for national estimates*/
+
+sum pw
+return list
+
+gen wt_adj=pw/r(mean)
 
 save "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS_full_wts_adj.dta", replace
