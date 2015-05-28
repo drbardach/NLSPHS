@@ -1,17 +1,566 @@
 ---
 title: "NLSPHS Feedback Report 2014"
 author: "University of Kentucky"
-date: "May 26, 2015"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 ---
 
+\center
+\vspace*{3\baselineskip}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# Customized Report for data$lhdname2014[i], r data$state2[i]
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+\vspace*{4\baselineskip}
+Public Health Practice-Based Research Networks Program  
+Center for Public Health Services & Systems Research  
+College of Public Health  
+University of Kentucky 
 
-```{r, echo=FALSE}
-plyr::ddply(data, "state2014", summarise, 
-            Q1 = sum(av1)
-            )
-```
+\vspace*{4\baselineskip}
+This study was funded through a grant from the Robert Wood Johnson Foundation.
+
+\vspace*{6\baselineskip}
+\flushright
+For inquiries please contact:  
+David Bardach, PhD  
+Public Health Practice-Based Research Networks Program  
+University of Kentucky  
+Telephone: 859-218-0302  
+Email: [publichealthPBRN@uky.edu](mailto:publichealthpbrn@uky.edu)  
+
+\vspace*{3\baselineskip}
+***
+
+\flushleft
+This report contains preliminary data from the 2014 survey. All errors
+are the responsibility of the authors.
+
+\pagebreak
+\center
+
+## Introduction
+\flushleft
+We are pleased to share with you a customized report of results from
+the ***2014 National Longitudinal Survey of Public Health Systems***—a
+survey of a national cohort of local health departments conducted
+initially in 1998 and again in 2006, 2012, and 2014. The attached report
+compares responses received from your department with aggregate
+measures reported by other responding departments. This information
+has been prepared as a courtesy to you, *and will not be disseminated
+to others*. We hope you will find this information interesting and
+helpful.
+
+**Study Overview**: As you may recall, the purpose of this study is to
+examine the availability of public health activities in communities
+across the nation, along with the organizations that contribute to
+performing these activities. The longitudinal nature of this study
+provides the opportunity to examine how public health systems are
+organized and how they change over time.
+
+**Survey Instrument**: The survey instrument used in 2014, 2012, 2006, and
+1998 was developed by Dr. C. Arden Miller at the University of North
+Carolina and Dr. Bernard Turnock at the University of
+Illinois-Chicago. This instrument was designed and validated as a
+screening tool to assess the availability of 20 recommended public
+health activities in the jurisdictions served by local health
+departments. Each of these activities reflects one of the three core
+public health functions as identified by the Institute of Medicine in
+1988 (assessment, policy development, and assurance). See the appendix
+to this report for more information on the instrument.
+
+**Study Population**: The study population consists of the ~~497~~ local
+health departments that reported serving jurisdictions of at least
+100,000 residents in 1997. A total of 78% of these departments
+responded to the survey in 1998, 68% responded in 2006, 70%
+responded in 2012, and ~~81%~~ responded in 2014.
+
+**Peer Groups**: Peer groups of local health departments were
+identified through a statistical clustering procedure that grouped
+departments based on similarities in several characteristics:
+population size of the jurisdiction served by the department;
+proportion of the population that is nonwhite; per capita personal
+income in the jurisdiction; and involvement in providing environmental
+health services. Each department was placed in one of 16 peer groups
+for comparative analysis.
+
+**Important Limitations**: It is important to recognize that the
+instrument does not provide a comprehensive assessment of all the
+important public health activities that may or may not be available at
+the local level. Additionally, the instrument relies on self-reported
+information provided by public health agency administrators and
+therefore is subject to common sources of measurement error associated
+with self-reported data. Validation studies have shown that these
+sources of error have relatively little effect on the accuracy of
+population estimates constructed from the instrument, but they can
+have larger effects on the accuracy of individual observations such as
+those provided for your individual jurisdiction in this report.
+
+**Your Report and Feedback**: This report provides customized,
+comparative results for your jurisdiction along with an appendix that
+describes how measures are constructed. This report was generated
+using an automated program, so errors are possible. We welcome your
+comments and feedback regarding this information, ***particularly if
+you note any errors or inaccuracies in the data***. Additionally, we
+would be glad to send you copies of subsequent analyses and reports
+from this study. Please contact our reseach team at
+[publichealthPBRN@uky.edu](mailto:publichealthpbrn@uky.edu).
+
+Thank you for your invaluable assistance in making this study
+possible. Your contributions provide the critical knowledge and
+information that will enable continued improvements in public health.
+
+\pagebreak
+\center
+
+## Availability of Public Health Activities
+\flushleft
+Measures of the availability of public health activities were
+constructed from responses to 20 questions asking whether or not a
+specific public health activity was performed in your jurisdiction.
+**Figure 1** shows the overall proportion of these activities that
+were reported as available in your jurisdiction, compared to similar
+"peer group" jurisdictions and to all U.S. jurisdictions included in
+the survey. Error bars denote 95% confidence intervals that can be
+used to assess whether your jurisdiction is significantly above/below
+the peer and US benchmarks. **Table 1** provides detailed information
+on the availability of each of the 20 activities.
+
+**Figure 1: Proportion of Public Health Activities Available in the
+Jurisdiction**
+
+**Table 1: Availability of Public Health Activities within Local
+Communities**
+
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Activity Your Jurisdiction Peer Group US Jurisdictions
+ 
+ (Percent Yes) (Percent Yes)
+ ------------------------------------------------------------------ --------------------- ----------------- -------------------- ------------------------ ---------- ---------- ---------- ------- -------
+ *2014* *2006* *1998*
+
+ 1 Community needs assessment Yes -- Yes
+
+ 2 Behavioral risk factor survey Yes -- Yes
+
+ 3 Adverse health events investigation Yes -- Yes
+
+ 4 Public health laboratory services Yes -- Yes
+
+ 5 Analysis of health determinants & resources Yes -- Yes
+
+ 6 Analysis of preventive services use No -- No
+
+ 7 Communication network of health organizations Yes -- No
+
+ 8 Inform elected officials about health issues Yes -- Yes
+
+ 9 Prioritization of community health needs Yes -- Yes
+
+ 10 Implementation of health initiatives in priority areas Yes -- Yes
+
+ 11 Community participation in health planning Yes -- Yes
+
+ 12 Resource allocation planning No -- Yes
+
+ 13 Resource deployment consistent with plan Yes -- Yes
+
+ 14 LHD organizational assessment Yes -- Yes
+
+ 15 Provision/linkage to needed health services No -- Yes
+
+ 16 Evaluation of public health services No -- No
+
+ 17 Monitor/improve program processes and outcomes No -- No
+
+ 18 Health information provision to the public Yes -- No
+
+ 19 Health information provision to the media Yes -- Yes
+
+ 20 Implementation of mandated PH activities No -- Yes
+
+ Percent of assessment activities available (\#1-6) 83% -- 83%
+
+ Percent of policy development activities available (\#7-13) 86% -- 86%
+
+ Percent of assurance activities available (\#14-20) 43% -- 57%
+
+ Overall percent of activities available (weighted by function) 71% -- 75%
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\pagebreak
+\center
+
+## Perceived Effectiveness of Public Health Activities
+\flushleft
+Measures of the perceived effectiveness of public health activities
+were constructed from responses to questions asking how well each
+public health activity is performed within the jurisdiction, using a
+five- point Likert scale ranging from "fully meets needs" to "meets no
+needs." **Figure 2** shows the aggregate measure of perceived
+effectiveness across all activities that were reported as available in
+your jurisdiction, compared to similar "peer group" jurisdictions and
+to all U.S. jurisdictions included in the survey. Error bars denote
+95% confidence intervals that can be used to assess whether your
+jurisdiction is significantly above/below the peer and US benchmarks.
+**Table 2** provides detailed information on the perceived
+effectivness of each of the 19 activities (activity \#20 was excluded
+from this measure).
+
+**Figure 2: Perceived Effectiveness of Public Health Activities**
+
+Note: percentages reflect percentage of maximum score
+
+**Table 2: Perceived Effectiveness of Public Health Activities**
+
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Activity Your Jurisdiction Peer Group US Jurisdictions
+ 
+ Average Rating Average Rating
+ --------------------------------------------------------------- --------------------- ------------------ ------------------------ ---------- ---------- ---------- ------- ------- -------
+ *2014* *2006* *1998* *2014* *2006* *1998*
+
+ 1 Community needs assessment 75% -- 75%
+
+ 2 Behavioral risk factor survey 25% -- 75%
+
+ 3 Adverse health events investigation 75% -- 75%
+
+ 4 Public health laboratory services 75% -- 75%
+
+ 5 Analysis of health determinants & resources 50% -- 25%
+
+ 6 Analysis of preventive services use 0% -- 0%
+
+ 7 Communication network of health organizations 50% -- 0%
+
+ 8 Inform elected officials about health issues 25% -- 75%
+
+ 9 Prioritization of community health needs 75% -- 75%
+
+ 10 Implementation of health initiatives in priority areas 25% -- 50%
+
+ 11 Community participation in health planning 50% -- 25%
+
+ 12 Resource allocation planning 0% -- 25%
+
+ 13 Resource deployment consistent with plan 25% -- 25%
+
+ 14 LHD organizational assessment 75% -- 75%
+
+ 15 Provision/linkage to needed health services 0% -- 25%
+
+ 16 Evaluation of public health services 0% -- 0%
+
+ 17 Monitor/improve program processes and outcomes 0% -- 0%
+
+ 18 Health information provision to the public 50% -- 0%
+
+ 19 Health information provision to the media 50% -- 75%
+
+ Average for assessment activities (\#1-6) 50% -- 54%
+
+ Average for policy development activities (\#7-13) 36% -- 39%
+
+ Average for assurance activities (\#14-19) 29% -- 39%
+
+ Overall average - all activities (weighted by IOM function) 38% -- 44%
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Likert rating scale: 100%=activity fully meets needs; 75%=meets most
+needs; 50%=meets half of needs; 25%=meets some needs; 0%=Meets no
+needs or not available
+
+\pagebreak
+\center
+
+## Local Health Department Contribution to Public Health Activities
+\flushleft
+Measures of the local health department's contribution to public
+health activities were constructed from responses to questions asking
+how much of the total community effort for each public health activity
+is contributed by the local department, using a five-point Likert
+scale ranging from "all effort" to "no effort." **Figure 3** shows the
+aggregate contribution measure across all activities that were
+reported as available in your jurisdiction, compared to similar "peer
+group" jurisdictions and to all U.S. jurisdictions included in the
+survey. Error bars denote 95% confidence intervals that can be used to
+assess whether your jurisdiction is significantly above/below the peer
+and US benchmarks. **Table 3** provides detailed information on
+contributions to each of the 19 activities (activity \#20 was excluded
+from this measure).
+
+**Figure 3: Proportion of Effort Contributed by Local**
+
+**Health Department**
+
+100%
+
+1998 2006 2014
+
+80%
+
+60%
+
+40%
+
+20%
+
+0%
+
+Your jurisdiction Peer group US Average
+
+**Table 3: Proportion of Effort Contributed by the Local Health
+Department**
+
+ Activity Your Jurisdiction *2014* *2006* *1998* Peer Group Average Rating *2014* *2006* *1998* US Jurisdictions Average Rating *2014* *2006* *1998*
+ --------------------------------------------------------------- ------------------------------------------ -------------------------------------------------- -------------------------------------------------------- ------- ------- ------- ------- ------- -------
+ 1 Community needs assessment 75% -- 50%
+ 2 Behavioral risk factor survey 0% -- 25%
+ 3 Adverse health events investigation 75% -- 75%
+ 4 Public health laboratory services 0% -- 25%
+ 5 Analysis of health determinants & resources 75% -- 75%
+ 6 Analysis of preventive services use 0% -- 0%
+ 7 Communication network of health organizations 25% -- 0%
+ 8 Inform elected officials about health issues 50% -- 75%
+ 9 Prioritization of community health needs 75% -- 75%
+ 10 Implementation of health initiatives in priority areas 25% -- 50%
+ 11 Community participation in health planning 75% -- 75%
+ 12 Resource allocation planning 0% -- 100%
+ 13 Resource deployment consistent with plan 25% -- 100%
+ 14 LHD organizational assessment 100% -- 100%
+ 15 Provision/linkage to needed health services 0% -- 75%
+ 16 Evaluation of public health services 0% -- 0%
+ 17 Monitor/improve program processes and outcomes 0% -- 0%
+ 18 Health information provision to the public 50% -- 0%
+ 19 Health information provision to the media 75% -- 75%
+ Average for assessment activities (\#1-6) 38% -- 42%
+ Average for policy development activities (\#7-13) 39% -- 68%
+ Average for assurance activities (\#14-19) 38% -- 42%
+ Overall average - all activities (weighted by IOM function) 38% -- 50%
+
+Likert rating scale: 100%=LHD contributes all effort; 75%=most effort;
+50%=about half of effort; 25%=some effort; 0%=no effort or not
+available
+
+\pagebreak
+\center
+
+## Scope of Participation by Other Organizations
+\flushleft
+Measures of the extent to which other organizations participate in
+performing public health activities were constructed from responses to
+questions asking about the types of other organizations that
+contribute to each public health activity. For each type of
+organization, we computed the proportion of the 19 public health activities to which
+they contribute (activity \#20 was excluded from this measure).
+**Figures 4-12** show these participation measures for the most
+prevalent organizational categories (not all categories are shown).
+Error bars denote 95% confidence intervals that can be used to assess
+whether your jurisdiction is significantly above/below the peer and US
+benchmarks.
+
+80%
+
+60%
+
+40%
+
+20%
+
+0%
+
+**State Government Agencies**
+
+Your juris. Peer group US Average
+
+100%
+
+80%
+
+100%
+
+**Local Government Agencies Federal Agencies**
+
+80%
+
+60%
+
+60%
+
+40%
+
+40%
+
+20%
+
+20%
+
+0%
+
+Your juris. Peer group US Average
+
+0%
+
+Your juris. Peer group US Average
+
+100%
+
+80%
+
+100%
+
+**Hospitals Physician Practices**
+
+80%
+
+60%
+
+60%
+
+40%
+
+40%
+
+20%
+
+20%
+
+0%
+
+Your juris. Peer group US Average
+
+0%
+
+Your juris. Peer group US Average
+
+100%
+
+80%
+
+100%
+
+**Community Health Centers Health Insurers**
+
+80%
+
+60%
+
+60%
+
+40%
+
+40%
+
+20%
+
+20%
+
+0%
+
+Your juris. Peer group US Average
+
+0%
+
+Your juris. Peer group US Average
+
+1998 2006 2014
+
+\pagebreak
+\center
+
+## Appendix: Survey Instrument
+\flushleft
+The survey instrument used in this study was developed through a
+series of studies on local public health practice sponsored by the
+U.S. Centers for Disease Control and Prevention. For a description,
+see Turnock BJ, Handler AS, Miller CA. 1998. Core function-related
+local public health practice effectiveness. *Journal of Public Health
+Management and Practice* 4(5):26-32. The 20 primary questions used on
+the survey instrument are:
+
+1. In your jurisdiction, is there a community needs assessment process that systematically describes the prevailing health status in the community?
+
+2. In the past three years in your jurisdiction, has a survey of the population for behavioral risk factors been conducted?
+
+3. In your jurisdiction, are timely investigations of adverse health events conducted on an ongoing basis— including communicable disease outbreaks and environmental health hazards?
+
+4. Are the necessary laboratory services available to the local public health agency to support investigations of adverse health events and meet routine diagnostic and surveillance needs?
+
+5. In your jurisdiction, has an analysis been completed of the determinants of and contributing factors to priority health needs, the adequacy of existing health resources, and the population groups most effected?
+
+6. In the past three years in your jurisdiction, has an analysis of age-specific participation in preventive and screening services been conducted?
+
+7. In your jurisdiction, is there a network of support and communication relationships that includes health- related organizations, the media, and the general public?
+
+8. In the past year in your jurisdiction, has there been a formal attempt to inform officials about the potential public health impact of decisions under their consideration?
+
+9. In your jurisdiction, has there been a prioritization of community health needs that have been identified from a community needs assessment?
+
+10. In the past three years in your jurisdiction, have community health initiatives been implemented consistent with priorities established in the community needs assessment?
+
+11. In your jurisdiction, has a community health action plan been developed with community participation to address priority  community health needs?
+
+12. In the past three years in your jurisdiction, were plans developed to allocate resources in a manner consistent with the community health action plan?
+
+13. In your jurisdiction, have resources been deployed as necessary to address priority health needs identified in a community health needs assessment?
+
+14. In the past three years in your jurisdiction, has the local public health agency conducted an organizational self-assessment?
+
+15. In your jurisdiction, are age-specific priority health needs effectively addressed through the provision of or linkage to appropriate services?
+
+16. In your jurisdiction, have there been regular evaluations of the effects of public health services on community health status?
+
+17. In the past three years in your jurisdiction, has the local public health agency used professionally recognized process and outcome measures to monitor programs and to redirect resources as appropriate?
+
+18. In your jurisdiction, is the public regularly provided with information about current health status, health care needs, positive health behaviors, and health care policy issues?
+
+19. In the past year in your jurisdiction, have reports on public health issues been provided to the media on a regular basis?
+
+20. In the past three years in your jurisdiction, has there been an instance in which the local public health agency has failed to implement a mandated program or service?
+
+Each question includes a series of 3 subquestions. Download a full
+copy of the survey instrument at: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://works.bepress.com/glen_mays/38/
+
+\pagebreak
+\center
+
+## About the Public Health PBRN Program
+
+\flushleft
+The Robert Wood Johnson Foundation’s ***Public Health Practice-Based
+Research Networks Program*** supports research on the organization,
+financing, and delivery of public health services using the
+infrastructure of practice-based networks (PBRNs). A Public Health
+PBRN brings multiple public health agencies into collaboration with an
+academic research partner to design and conduct studies in real-world
+practice settings. Currently, more than 25 public health PBRNs operate
+across the U.S., involving more than 900 local and state public health
+agencies, professional associations, and community partners, along
+with more than 30 universities. The program supports research through
+several different mechanisms, including (1) large-scale Research
+Implementation Awards (RIAs) conducted by established networks; (2)
+Quick-Strike Research Fund (QSRF) awards that support short-term,
+time-sensitive studies on emerging issues; and (3) multi-network
+studies wherein multiple PBRNs collaborate to implement studies across
+large and diverse collections of public health settings.
+
+The Public Health PBRN National Coordinating Center coordinates the
+development individual and multi- network studies on a variety of
+topics related to the organization, financing, and delivery of public
+health services. This Center is based at the University of Kentucky
+and supported by the Robert Wood Johnson Foundation. For more
+information on the PBRN Program, contact us through the information
+below:
+\vspace*{1\baselineskip}
+
+**Public Health PBRN National Coordinating Center**  
+Glen Mays, Ph.D., Director  
+University of Kentuky College of Public Health  
+111 Washington Avenue, Suite 201  
+Lexington, KY 40536
+
+Email: [publichealthPBRN@uky.edu](mailto:publichealthpbrn@uky.edu)  
+Website: [www.publichealthsystems.org/pbrn](http://www.publichealthsystems.org/pbrn)  
+Research archive: [http://works.bepress.com/glen\_mays](http://works.bepress.com/glen_mays)  
+Journal: [www.FrontiersInPHSSR.org*](http://www.frontiersinphssr.org/)
