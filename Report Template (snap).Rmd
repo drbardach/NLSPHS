@@ -159,282 +159,132 @@ Note: percentages reflect percentage of maximum score
 \hline
 \textbf{} & 
   \textbf{} & 
-  \textbf{} & 
-  \textbf{} & 
-  \textbf{} & 
   \textbf{Peers} & 
   \textbf{USA} \\
 \textbf{Activity} & 
-  \textbf{1998} & 
-  \textbf{2006} & 
-  \textbf{2012} & 
   \textbf{2014} & 
   \textbf{(\%)} &
   \textbf{(\%)} \\
 \hline 
 1. Community needs assessment &
-  `r ifelse(is.na(data$av1[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av1[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av1[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av1[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av1[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av1[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av1[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av1[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av1.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av1.m[sum14.all$Big == data$Big[i]], 0)` \\
 2. Behavioral risk factor survey &
-  `r ifelse(is.na(data$av2[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av2[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av2[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av2[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av2[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av2[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av2[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av2[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av2.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av2.m[sum14.all$Big == data$Big[i]], 0)` \\
 3. Adverse health events investigation &
-  `r ifelse(is.na(data$av3[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av3[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av3[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av3[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av3[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av3[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av3[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av3[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av3.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av3.m[sum14.all$Big == data$Big[i]], 0)` \\
 4. Public health laboratory services &
-  `r ifelse(is.na(data$av4[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av4[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av4[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av4[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av4[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av4[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av4[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av4[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av4.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av4.m[sum14.all$Big == data$Big[i]], 0)` \\
 5. Analysis of health determinants \& resources &
-  `r ifelse(is.na(data$av5[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av5[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av5[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av5[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av5[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av5[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av5[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av5[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av5.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av5.m[sum14.all$Big == data$Big[i]], 0)` \\
 6. Analysis of preventive services use &
-  `r ifelse(is.na(data$av6[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av6[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av6[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av6[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av6[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av6[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av6[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av6[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av6.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av6.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 7. Communication network of health organizations &
-  `r ifelse(is.na(data$av7[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av7[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av7[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av7[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av7[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av7[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av7[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av7[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av7.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av7.m[sum14.all$Big == data$Big[i]], 0)` \\
 8. Inform elected officials about health issues &
-  `r ifelse(is.na(data$av8[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av8[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av8[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av8[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av8[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av8[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av8[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av8[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av8.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av8.m[sum14.all$Big == data$Big[i]], 0)` \\
 9. Prioritization of community health needs &
-  `r ifelse(is.na(data$av9[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av9[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av9[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av9[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av9[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av9[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av9[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av9[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av9.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av9.m[sum14.all$Big == data$Big[i]], 0)` \\
 10. Implementation of health initiatives in priority areas &
-  `r ifelse(is.na(data$av10[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av10[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av10[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av10[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av10[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av10[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av10[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av10[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av10.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av10.m[sum14.all$Big == data$Big[i]], 0)` \\
 11. Community participation in health planning &
-  `r ifelse(is.na(data$av11[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av11[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av11[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av11[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av11[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av11[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av11[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av11[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av11.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av11.m[sum14.all$Big == data$Big[i]], 0)` \\
 12. Resource allocation planning &
-  `r ifelse(is.na(data$av12[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av12[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av12[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av12[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av12[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av12[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av12[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av12[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av12.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av12.m[sum14.all$Big == data$Big[i]], 0)` \\
 13. Resource deployment consistent with plan &
-  `r ifelse(is.na(data$av13[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av13[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av13[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av13[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av13[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av13[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av13[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av13[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av13.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av13.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 14. LHD organizational assessment &
-  `r ifelse(is.na(data$av14[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av14[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av14[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av14[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av14[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av14[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av14[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av14[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av14.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av14.m[sum14.all$Big == data$Big[i]], 0)` \\
 15. Provision/linkage to needed health services &
-  `r ifelse(is.na(data$av15[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av15[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av15[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av15[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av15[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av15[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av15[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av15[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av15.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av15.m[sum14.all$Big == data$Big[i]], 0)` \\
 16. Evaluation of public health services &
-  `r ifelse(is.na(data$av16[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av16[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av16[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av16[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av16[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av16[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av16[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av16[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av16.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av16.m[sum14.all$Big == data$Big[i]], 0)` \\
 17. Monitor/improve program processes and outcomes &
-  `r ifelse(is.na(data$av17[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av17[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av17[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av17[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av17[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av17[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av17[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av17[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av17.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av17.m[sum14.all$Big == data$Big[i]], 0)` \\
 18. Health information provision to the public &
-  `r ifelse(is.na(data$av18[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av18[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av18[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av18[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av18[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av18[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av18[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av18[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av18.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av18.m[sum14.all$Big == data$Big[i]], 0)` \\
 19. Health information provision to the media &
-  `r ifelse(is.na(data$av19[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av19[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av19[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av19[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av19[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av19[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av19[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av19[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av19.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av19.m[sum14.all$Big == data$Big[i]], 0)` \\
 20. Implementation of mandated PH activities &
-  `r ifelse(is.na(data$av20[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av20[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av20[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av20[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
-  `r ifelse(is.na(data$av20[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      ifelse(data$av20[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r ifelse(is.na(data$av20[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       ifelse(data$av20[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]] == 1, "Yes", "No"))` &
   `r round(100*sum14.peer$av20.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$av20.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 \textit{Percent of assessment activities (\#1-6)} &
-  `r ifelse(is.na(data$avass[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avass[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avass[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avass[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avass[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avass[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$avass[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$avass[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$avass.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$avass.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Percent of policy development activities (\#7-13)} &
-  `r ifelse(is.na(data$avpol[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avpol[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avpol[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avpol[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avpol[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avpol[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$avpol[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$avpol[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$avpol.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$avpol.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Percent of assurance activities (\#14-20)} &
-  `r ifelse(is.na(data$avasr[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avasr[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avasr[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avasr[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avasr[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avasr[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$avasr[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$avasr[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$avasr.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$avasr.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Overall percentage - all activities (weighted by IOM function)} &
-  `r ifelse(is.na(data$avtot[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avtot[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avtot[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avtot[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$avtot[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$avtot[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$avtot[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$avtot[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$avtot.m[sum14.peer$peer == data$peer[i]], 0)` &
@@ -504,272 +354,128 @@ Note: percentages reflect percentage of maximum score
 \begin{tabular}{lcccccc}
 \hline
 \textbf{} & 
-  \textbf{1998} & 
-  \textbf{2006} & 
-  \textbf{2012} & 
   \textbf{2014} & 
   \textbf{Peers} & 
   \textbf{USA} \\
 \textbf{Activity} & 
-  \textbf{(\%)} & 
-  \textbf{(\%)} &
-  \textbf{(\%)} & 
   \textbf{(\%)} &
   \textbf{(\%)} &
   \textbf{(\%)} \\
 \hline 
 1. Community needs assessment &
-  `r ifelse(is.na(data$eff1[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff1[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff1[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff1[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff1[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff1[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff1[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff1[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff1.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff1.m[sum14.all$Big == data$Big[i]], 0)` \\
 2. Behavioral risk factor survey &
-  `r ifelse(is.na(data$eff2[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff2[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff2[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff2[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff2[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff2[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff2[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff2[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff2.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff2.m[sum14.all$Big == data$Big[i]], 0)` \\
 3. Adverse health events investigation &
-  `r ifelse(is.na(data$eff3[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff3[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff3[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff3[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff3[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff3[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff3[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff3[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff3.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff3.m[sum14.all$Big == data$Big[i]], 0)` \\
 4. Public health laboratory services &
-  `r ifelse(is.na(data$eff4[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff4[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff4[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff4[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff4[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff4[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff4[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff4[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff4.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff4.m[sum14.all$Big == data$Big[i]], 0)` \\
 5. Analysis of health determinants \& resources &
-  `r ifelse(is.na(data$eff5[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff5[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff5[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff5[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff5[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff5[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff5[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff5[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff5.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff5.m[sum14.all$Big == data$Big[i]], 0)` \\
 6. Analysis of preventive services use &
-  `r ifelse(is.na(data$eff6[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff6[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff6[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff6[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff6[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff6[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff6[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff6[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff6.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff6.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 7. Communication network of health organizations &
-  `r ifelse(is.na(data$eff7[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff7[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff7[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff7[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff7[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff7[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff7[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff7[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff7.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff7.m[sum14.all$Big == data$Big[i]], 0)` \\
 8. Inform elected officials about health issues &
-  `r ifelse(is.na(data$eff8[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff8[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff8[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff8[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff8[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff8[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff8[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff8[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff8.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff8.m[sum14.all$Big == data$Big[i]], 0)` \\
 9. Prioritization of community health needs &
-  `r ifelse(is.na(data$eff9[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff9[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff9[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff9[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff9[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff9[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff9[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff9[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff9.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff9.m[sum14.all$Big == data$Big[i]], 0)` \\
 10. Implementation of health initiatives in priority areas &
-  `r ifelse(is.na(data$eff10[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff10[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff10[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff10[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff10[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff10[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff10[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff10[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff10.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff10.m[sum14.all$Big == data$Big[i]], 0)` \\
 11. Community participation in health planning &
-  `r ifelse(is.na(data$eff11[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff11[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff11[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff11[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff11[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff11[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff11[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff11[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff11.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff11.m[sum14.all$Big == data$Big[i]], 0)` \\
 12. Resource allocation planning &
-  `r ifelse(is.na(data$eff12[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff12[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff12[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff12[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff12[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff12[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff12[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff12[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff12.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff12.m[sum14.all$Big == data$Big[i]], 0)` \\
 13. Resource deployment consistent with plan &
-  `r ifelse(is.na(data$eff13[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff13[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff13[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff13[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff13[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff13[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff13[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff13[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff13.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff13.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 14. LHD organizational assessment &
-  `r ifelse(is.na(data$eff14[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff14[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff14[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff14[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff14[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff14[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff14[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff14[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff14.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff14.m[sum14.all$Big == data$Big[i]], 0)` \\
 15. Provision/linkage to needed health services &
-  `r ifelse(is.na(data$eff15[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff15[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff15[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff15[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff15[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff15[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff15[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff15[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff15.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff15.m[sum14.all$Big == data$Big[i]], 0)` \\
 16. Evaluation of public health services &
-  `r ifelse(is.na(data$eff16[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff16[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff16[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff16[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff16[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff16[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff16[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff16[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff16.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff16.m[sum14.all$Big == data$Big[i]], 0)` \\
 17. Monitor/improve program processes and outcomes &
-  `r ifelse(is.na(data$eff17[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff17[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff17[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff17[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff17[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff17[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff17[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff17[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff17.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff17.m[sum14.all$Big == data$Big[i]], 0)` \\
 18. Health information provision to the public &
-  `r ifelse(is.na(data$eff18[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff18[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff18[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff18[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff18[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff18[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff18[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff18[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff18.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff18.m[sum14.all$Big == data$Big[i]], 0)` \\
 19. Health information provision to the media &
-  `r ifelse(is.na(data$eff19[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$eff19[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff19[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff19[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$eff19[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$eff19[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$eff19[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$eff19[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$eff19.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$eff19.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 \textit{Percent of assessment activities (\#1-6)} &
-  `r ifelse(is.na(data$effass[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effass[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$effass[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effass[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$effass[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effass[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$effass[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$effass[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$effass.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$effass.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Percent of policy development activities (\#7-13)} &
-  `r ifelse(is.na(data$effpol[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effpol[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$effpol[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effpol[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$effpol[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effpol[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$effpol[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$effpol[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$effpol.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$effpol.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Percent of assurance activities (\#14-19)} &
-  `r ifelse(is.na(data$effasr[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effasr[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$effasr[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effasr[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$effasr[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$effasr[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$effasr[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$effasr[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$effasr.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$effasr.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Overall percentage - all activities (weighted by IOM function)} &
-  `r ifelse(is.na(data$efftot[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$efftot[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$efftot[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$efftot[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$efftot[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$efftot[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$efftot[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$efftot[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$efftot.m[sum14.peer$peer == data$peer[i]], 0)` &
@@ -850,272 +556,128 @@ Note: percentages reflect percentage of maximum score
 \begin{tabular}{lcccccc}
 \hline
 \textbf{} & 
-  \textbf{1998} & 
-  \textbf{2006} & 
-  \textbf{2012} & 
   \textbf{2014} & 
   \textbf{Peers} & 
   \textbf{USA} \\
 \textbf{Activity} & 
-  \textbf{(\%)} & 
-  \textbf{(\%)} &
-  \textbf{(\%)} & 
   \textbf{(\%)} &
   \textbf{(\%)} &
   \textbf{(\%)} \\
 \hline 
 1. Community needs assessment &
-  `r ifelse(is.na(data$lhd1[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd1[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd1[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd1[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd1[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd1[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd1[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd1[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd1.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd1.m[sum14.all$Big == data$Big[i]], 0)` \\
 2. Behavioral risk factor survey &
-  `r ifelse(is.na(data$lhd2[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd2[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd2[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd2[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd2[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd2[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd2[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd2[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd2.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd2.m[sum14.all$Big == data$Big[i]], 0)` \\
 3. Adverse health events investigation &
-  `r ifelse(is.na(data$lhd3[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd3[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd3[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd3[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd3[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd3[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd3[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd3[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd3.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd3.m[sum14.all$Big == data$Big[i]], 0)` \\
 4. Public health laboratory services &
-  `r ifelse(is.na(data$lhd4[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd4[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd4[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd4[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd4[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd4[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd4[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd4[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd4.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd4.m[sum14.all$Big == data$Big[i]], 0)` \\
 5. Analysis of health determinants \& resources &
-  `r ifelse(is.na(data$lhd5[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd5[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd5[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd5[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd5[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd5[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd5[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd5[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd5.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd5.m[sum14.all$Big == data$Big[i]], 0)` \\
 6. Analysis of preventive services use &
-  `r ifelse(is.na(data$lhd6[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd6[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd6[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd6[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd6[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd6[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd6[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd6[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd6.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd6.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 7. Communication network of health organizations &
-  `r ifelse(is.na(data$lhd7[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd7[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd7[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd7[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd7[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd7[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd7[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd7[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd7.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd7.m[sum14.all$Big == data$Big[i]], 0)` \\
 8. Inform elected officials about health issues &
-  `r ifelse(is.na(data$lhd8[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd8[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd8[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd8[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd8[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd8[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd8[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd8[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd8.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd8.m[sum14.all$Big == data$Big[i]], 0)` \\
 9. Prioritization of community health needs &
-  `r ifelse(is.na(data$lhd9[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd9[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd9[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd9[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd9[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd9[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd9[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd9[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd9.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd9.m[sum14.all$Big == data$Big[i]], 0)` \\
 10. Implementation of health initiatives in priority areas &
-  `r ifelse(is.na(data$lhd10[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd10[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd10[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd10[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd10[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd10[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd10[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd10[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd10.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd10.m[sum14.all$Big == data$Big[i]], 0)` \\
 11. Community participation in health planning &
-  `r ifelse(is.na(data$lhd11[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd11[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd11[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd11[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd11[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd11[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd11[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd11[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd11.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd11.m[sum14.all$Big == data$Big[i]], 0)` \\
 12. Resource allocation planning &
-  `r ifelse(is.na(data$lhd12[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd12[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd12[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd12[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd12[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd12[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd12[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd12[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd12.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd12.m[sum14.all$Big == data$Big[i]], 0)` \\
 13. Resource deployment consistent with plan &
-  `r ifelse(is.na(data$lhd13[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd13[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd13[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd13[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd13[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd13[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd13[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd13[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd13.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd13.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 14. LHD organizational assessment &
-  `r ifelse(is.na(data$lhd14[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd14[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd14[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd14[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd14[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd14[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd14[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd14[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd14.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd14.m[sum14.all$Big == data$Big[i]], 0)` \\
 15. Provision/linkage to needed health services &
-  `r ifelse(is.na(data$lhd15[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd15[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd15[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd15[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd15[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd15[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd15[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd15[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd15.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd15.m[sum14.all$Big == data$Big[i]], 0)` \\
 16. Evaluation of public health services &
-  `r ifelse(is.na(data$lhd16[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd16[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd16[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd16[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd16[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd16[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd16[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd16[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd16.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd16.m[sum14.all$Big == data$Big[i]], 0)` \\
 17. Monitor/improve program processes and outcomes &
-  `r ifelse(is.na(data$lhd17[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd17[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd17[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd17[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd17[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd17[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd17[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd17[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd17.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd17.m[sum14.all$Big == data$Big[i]], 0)` \\
 18. Health information provision to the public &
-  `r ifelse(is.na(data$lhd18[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd18[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd18[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd18[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd18[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd18[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd18[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd18[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd18.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd18.m[sum14.all$Big == data$Big[i]], 0)` \\
 19. Health information provision to the media &
-  `r ifelse(is.na(data$lhd19[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhd19[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd19[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd19[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))`  &
-  `r ifelse(is.na(data$lhd19[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "",
-      round(100*data$lhd19[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r ifelse(is.na(data$lhd19[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "",
       round(100*data$lhd19[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))`  &
   `r round(100*sum14.peer$lhd19.m[sum14.peer$peer == data$peer[i]], 0)`  &
   `r round(100*sum14.all$lhd19.m[sum14.all$Big == data$Big[i]], 0)` \\
 \hline
 \textit{Percent of assessment activities (\#1-6)} &
-  `r ifelse(is.na(data$lhdass[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdass[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdass[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdass[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdass[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdass[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$lhdass[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$lhdass[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$lhdass.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$lhdass.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Percent of policy development activities (\#7-13)} &
-  `r ifelse(is.na(data$lhdpol[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdpol[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdpol[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdpol[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdpol[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdpol[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$lhdpol[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$lhdpol[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$lhdpol.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$lhdpol.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Percent of assurance activities (\#14-19)} &
-  `r ifelse(is.na(data$lhdasr[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdasr[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdasr[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdasr[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdasr[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdasr[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$lhdasr[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$lhdasr[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$lhdasr.m[sum14.peer$peer == data$peer[i]], 0)` &
   `r round(100*sum14.all$lhdasr.m[sum14.all$Big == data$Big[i]], 0)` \\
 \textit{Overall percentage - all activities (weighted by IOM function)} &
-  `r ifelse(is.na(data$lhdtot[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdtot[data$yearsurvey == 1998 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdtot[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdtot[data$yearsurvey == 2006 & data$nacchoid == data$nacchoid[i]], 0))` &
-  `r ifelse(is.na(data$lhdtot[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]]), "", 
-      round(100*data$lhdtot[data$yearsurvey == 2012 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r ifelse(is.na(data$lhdtot[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]]), "", 
       round(100*data$lhdtot[data$yearsurvey == 2014 & data$nacchoid == data$nacchoid[i]], 0))` &
   `r round(100*sum14.peer$lhdtot.m[sum14.peer$peer == data$peer[i]], 0)` &

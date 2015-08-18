@@ -1,6 +1,6 @@
 /*Bringing in previous waves of NLSPHS data*/
 use "X:\xDATA\NLSPHS 2014\nlsphs_tot.dta", clear
-keep nacchoid survresp survsamp yearnaccho yearsurvey id1998 id2006 id2012 peer lhdn*
+keep nacchoid survresp survsamp yearnaccho yearsurvey id1998 id2006 id2012 unid peer lhdn*
 tab1 survresp yearsurvey
 tab survresp yearsurvey
 
@@ -22,6 +22,8 @@ gsort -id1998 -nacchoid_rec
 replace nacchoid_rec1=nacchoid if _n>=948
 
 replace nacchoid=nacchoid_rec1 
+
+drop nacchoid_rec nacchoid_rec1
 
 sort nacchoid
 
@@ -58,7 +60,7 @@ tab survresp
 
 
 */
-drop id2012 nacchoid_rec yearsurv06 id2006
+drop id2012 yearsurv06 id2006
 save nlsphs_1998, replace
 
 use nlsphs_tot, clear
@@ -80,7 +82,7 @@ tab survresp
 
 
 */
-drop yearsurv98 id2012 id1998 nacchoid_rec
+drop yearsurv98 id2012 id1998 
 
 save nlsphs_2006, replace
 
@@ -105,7 +107,7 @@ quietly by nacchoid: gen dup=cond(_N==1,0,_n)
 drop if dup==2
 sort nacchoid
 merge nacchoid using year06_trunc
-drop lhdnm06 lhdname lhdnm12 nacchoid_rec nacchoid_rec1 dup _merge test check
+drop lhdnm06 lhdname lhdnm12 dup _merge test check
 
 gen yearsurv12=1 
 
@@ -116,10 +118,19 @@ replace yearsurvey=2012 if yearsurvey==.
 replace yearnaccho=2010
 drop yearsurv98 yearsurv06 id2006 id1998
 save nlsphs_2012, replace
+gen TBD=1
 
-use "X:\xDATA\NLSPHS 2014\nlsphs_tot.dta", clear
+tab survresp
 
-keep nacchoid id1998 id2006 id2012 year survresp survsamp yearnaccho yearsurvey lhdn* county_06 ptcnty_06 av1-peer
+keep if survresp==0
+
+save "X:\xDATA\NLSPHS 2014\Analysis\data\NLSPHS_2012_noresp.dta", replace
+
+
+/*
+
+*/
+
 
 
 

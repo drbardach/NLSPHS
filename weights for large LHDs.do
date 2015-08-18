@@ -371,14 +371,15 @@ sort nacchoid
 
 save large, replace
 
-use "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS2014_large.dta", clear
+use "X:\xDATA\NLSPHS 2014\Analysis\data\NLSPHS2014_large.dta", clear
 count
 gen NLSPHS_responded=1
-drop Region popcat SelectionProb SamplingWeight
-sort nacchoid
-merge nacchoid using large
+drop region popcat selectionprob samplingweight
 duplicates list nacchoid unid
 drop if unid==23309 & name_first=="Carlos" // We obtained paper response from the unid=23309 for TX007 and will use the response from it
+sort nacchoid
+merge nacchoid using large
+count
 
 replace pop13=c0population if pop13==.
 replace NLSPHS_responded=0 if NLSPHS_responded==. & nlsphs !=.
@@ -393,6 +394,7 @@ replace region1=4 if region=="West"
 rename (region region1) (region_txt region)
 
 drop if insamp_arm1==0
+duplicates list nacchoid
 
 tab NLSPHS_responded
 

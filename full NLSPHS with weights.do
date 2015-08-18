@@ -73,8 +73,9 @@ replace state2014=substr(nacchoid,1,2)
 
 levelsof state2014, local(N)
 display `: word count `N''
+replace state2=proper(state2)
 
-save "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS_full_wts_adj.dta", replace
+save "X:\xDATA\NLSPHS 2014\Analysis\data\NLSPHS_2014_wts_adj.dta", replace
 
 /*Normalizing the weights for national estimates*/
 
@@ -83,4 +84,20 @@ return list
 
 gen wt_adj=pw/r(mean)
 
-save "X:\xDATA\NLSPHS 2014\Analysis\NLSPHS_full_wts_adj.dta", replace
+sum wt_adj
+
+/*
+
+. sum wt_adj
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      wt_adj |      1052           1    .8395486    .469238   3.524741
+
+*/
+
+gen responded=1 if state2!=""
+replace responded=0 if state2==""
+tab responded
+
+save "X:\xDATA\NLSPHS 2014\Analysis\data\NLSPHS_2014_wts_adj.dta", replace

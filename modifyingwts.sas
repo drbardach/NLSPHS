@@ -109,7 +109,7 @@ by nacchoid;
 run;
 
 proc print data=smalljuris_3;
-where c0population=.=. ;
+where c0population=.;
 run;
 
 data smalljuris;
